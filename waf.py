@@ -135,7 +135,7 @@ class Waf(object):
 
         # TODO: Deal with error codes
         code = response.status_code
-        if code != 200 and code != 400: sys.exit('Error: ...')
+        if code != 200 and code != 400: sys.exit('Error: Status code: ' + str(code))
 
         return json.loads(response.text)
 
