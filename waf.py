@@ -170,8 +170,8 @@ class Waf(object):
         oData = defaultdict(int)
         rDesc = []
         for event in self.events:
-
-            rData[event['rule_id'] + " " + event['rule_message']] += 1
+            
+            rData[str(event['rule_id']) + " " + str(event['rule_message'])] += 1
 
             for owasp in event["triggered_rule_ids"]:
                 oData[owasp] += 1
